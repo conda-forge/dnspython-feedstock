@@ -3,7 +3,7 @@
 {% set bundle = "zip" %}
 {% set hash_type = "sha256" %}
 {% set hash = "36c5e8e38d4369a08b6780b7f27d790a292b2b08eea01607865bf0936c558e01" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -17,17 +17,17 @@ source:
 build:
   noarch: python
   number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
     - setuptools
-
+    - pip
   run:
     - python
     - idna >=2.1
-    - pycrypto >=2.6.1
+    - pycryptodome
     - ecdsa >=0.13
 
 test:
