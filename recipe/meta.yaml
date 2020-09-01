@@ -16,18 +16,16 @@ source:
 build:
   noarch: python
   number: {{ build }}
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - idna >=2.1
-    - pycryptodome
-    - ecdsa >=0.13
+    - cryptography >=2.6
 
 test:
   imports:
@@ -35,6 +33,7 @@ test:
     - dns.rdtypes
     - dns.rdtypes.ANY
     - dns.rdtypes.IN
+    - dns.rdtypes.CH
 
 about:
   home: http://www.dnspython.org
@@ -48,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - synapticarbors
