@@ -1,9 +1,8 @@
 {% set name = "dnspython" %}
-{% set version = "1.16.0" %}
+{% set version = "2.0.0" %}
 {% set bundle = "zip" %}
-{% set hash_type = "sha256" %}
-{% set hash = "36c5e8e38d4369a08b6780b7f27d790a292b2b08eea01607865bf0936c558e01" %}
-{% set build = 1 %}
+{% set hash = "044af09374469c3a39eeea1a146e8cac27daec951f1f1f157b1962fc7cb9d1b7" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -12,23 +11,21 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   noarch: python
   number: {{ build }}
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - idna >=2.1
-    - pycryptodome
-    - ecdsa >=0.13
+    - cryptography >=2.6
 
 test:
   imports:
@@ -36,10 +33,11 @@ test:
     - dns.rdtypes
     - dns.rdtypes.ANY
     - dns.rdtypes.IN
+    - dns.rdtypes.CH
 
 about:
   home: http://www.dnspython.org
-  summary: 'DNS toolkit'
+  summary: DNS toolkit
   license: ISC
   license_file: LICENSE
   license_family: OTHER
@@ -49,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - synapticarbors
