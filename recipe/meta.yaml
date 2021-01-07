@@ -1,7 +1,7 @@
 {% set name = "dnspython" %}
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 {% set bundle = "zip" %}
-{% set hash = "044af09374469c3a39eeea1a146e8cac27daec951f1f1f157b1962fc7cb9d1b7" %}
+{% set hash = "e4a87f0b573201a0f3727fa18a516b055fd1107e0e5477cded4a2de497df1dd4" %}
 {% set build = 0 %}
 
 package:
@@ -16,7 +16,7 @@ source:
 build:
   noarch: python
   number: {{ build }}
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
