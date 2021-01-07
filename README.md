@@ -5,11 +5,13 @@ Home: http://www.dnspython.org
 
 Package license: ISC
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dnspython-feedstock/blob/master/LICENSE.txt)
 
 Summary: DNS toolkit
 
+Development: https://github.com/rthalley/dnspython
 
+Documentation: http://www.dnspython.org
 
 Current build status
 ====================
