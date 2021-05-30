@@ -2,7 +2,7 @@
 {% set version = "2.0.0" %}
 {% set bundle = "zip" %}
 {% set hash = "044af09374469c3a39eeea1a146e8cac27daec951f1f1f157b1962fc7cb9d1b7" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -48,3 +48,4 @@ extra:
   recipe-maintainers:
     - pmlandwehr
     - synapticarbors
+    - jan-janssen
