@@ -1,5 +1,5 @@
 {% set name = "dnspython" %}
-{% set version = "2.2.1" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0f7569a4a6ff151958b64304071d370daa3243d15941a7beedf0c9fe5105603e
+  sha256: 224e32b03eb46be70e12ef6d64e0be123a64e621ab4c0822ff6d450d52a540b9
 
 build:
   noarch: python
