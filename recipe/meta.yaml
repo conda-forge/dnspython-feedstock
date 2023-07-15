@@ -23,6 +23,8 @@ requirements:
     - python >=3.6
     - idna >=2.1
     - cryptography >=2.6
+    - httpcore
+    - sniffio
 
 test:
   imports:
