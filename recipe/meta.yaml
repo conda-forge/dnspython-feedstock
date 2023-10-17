@@ -11,20 +11,26 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8.0,<4.0.0
     - pip
-    - poetry
+    - poetry-core
   run:
-    - python >=3.6
-    - idna >=2.1
-    - cryptography >=2.6
-    - httpcore
+    - python >=3.8.0,<4.0.0
+    - idna >=2.1,<4.0
+    - cryptography >=2.6,<42.0
+    - httpcore >=0.17.3
     - sniffio
+  run_constrained:
+    - httpx >=0.24.1
+    - h2 >=4.1.0
+    - trio >=0.14,<0.23
+    - wmi >=1.5.1,<2.0.0
+    - aioquic >=0.9.20
 
 test:
   imports:
@@ -51,3 +57,4 @@ extra:
   recipe-maintainers:
     - synapticarbors
     - jan-janssen
+    - xylar
