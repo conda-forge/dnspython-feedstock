@@ -149,4 +149,5 @@ Feedstock Maintainers
 
 * [@jan-janssen](https://github.com/jan-janssen/)
 * [@synapticarbors](https://github.com/synapticarbors/)
+* [@xylar](https://github.com/xylar/)
 
