@@ -19,6 +19,7 @@ requirements:
     - python >=3.8.0,<4.0.0
     - pip
     - poetry-core
+    - hatchling
   run:
     - python >=3.8.0,<4.0.0
     - idna >=2.1,<4.0
