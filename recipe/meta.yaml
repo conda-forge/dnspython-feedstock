@@ -1,5 +1,5 @@
 {% set name = "dnspython" %}
-{% set version = "2.4.2" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8dcfae8c7460a2f84b4072e26f1c9f4101ca20c071649cb7c34e8b6a93d58984
+  sha256: a0034815a59ba9ae888946be7ccca8f7c157b286f8455b379c692efb51022a15
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -19,6 +19,7 @@ requirements:
     - python >=3.8.0,<4.0.0
     - pip
     - poetry-core
+    - hatchling
   run:
     - python >=3.8.0,<4.0.0
     - idna >=2.1,<4.0
