@@ -16,20 +16,19 @@ build:
 
 requirements:
   host:
-    - python >=3.8.0,<4.0.0
+    - python >=3.9.0,<4.0.0
     - pip
-    - poetry-core
-    - hatchling
+    - hatchling >=1.21.0
   run:
-    - python >=3.8.0,<4.0.0
+    - python >=3.9.0,<4.0.0
     - sniffio
   run_constrained:
-    - aioquic >=0.9.25
-    - cryptography >=42
+    - aioquic >=1.0.0
+    - cryptography >=43
     - httpcore >=1.0.0
     - httpx >=0.26.0
     - h2 >=4.1.0
-    - idna >=3.6
+    - idna >=3.7
     - trio >=0.23
     - wmi >=1.5.1
 
