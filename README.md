@@ -3,7 +3,7 @@ About dnspython-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dnspython-feedstock/blob/main/LICENSE.txt)
 
-Home: http://www.dnspython.org
+Home: http://www.dnspython.org/
 
 Package license: ISC
 
@@ -11,7 +11,7 @@ Summary: DNS toolkit
 
 Development: https://github.com/rthalley/dnspython
 
-Documentation: http://www.dnspython.org
+Documentation: http://www.dnspython.org/
 
 Current build status
 ====================
