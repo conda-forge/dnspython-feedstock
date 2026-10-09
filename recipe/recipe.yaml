@@ -49,6 +49,7 @@ tests:
 about:
   summary: DNS toolkit
   license: ISC
+  # Local copy of license until https://github.com/rthalley/dnspython/pull/1335 is merged and new release
   license_file: LICENSE
   homepage: http://www.dnspython.org
   repository: https://github.com/rthalley/dnspython
